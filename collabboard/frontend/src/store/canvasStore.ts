@@ -21,7 +21,6 @@ const DEFAULT_STYLE: ElementStyle = {
   fontFamily:  'Inter, sans-serif',
   textAlign:   'left',
 };
-
 const MAX_HISTORY = 50;
 
 interface CanvasStore {
@@ -105,9 +104,9 @@ export const useCanvasStore = create<CanvasStore>((set, get) => ({
   // ─── Elements ──────────────────────────────────────────────
 
   addElement: (element) => {
-    set((s) => ({ elements: [...s.elements, element] }));
-    get().pushHistory();
-  },
+  set((s) => ({ elements: [...s.elements, element] }));
+  get().pushHistory();
+},
 
   updateElement: (id, changes) => {
   set((s) => ({
@@ -119,13 +118,13 @@ export const useCanvasStore = create<CanvasStore>((set, get) => ({
   }));
 },
 
-  deleteElements: (ids) => {
-    set((s) => ({
-      elements: s.elements.filter((el) => !ids.includes(el.id)),
-      selectedElementIds: s.selectedElementIds.filter((id) => !ids.includes(id)),
-    }));
-    get().pushHistory();
-  },
+ deleteElements: (ids) => {
+  set((s) => ({
+    elements: s.elements.filter((el) => !ids.includes(el.id)),
+    selectedElementIds: s.selectedElementIds.filter((id) => !ids.includes(id)),
+  }));
+  get().pushHistory();
+},
 
   setElements: (elements) => set({ elements }),
 

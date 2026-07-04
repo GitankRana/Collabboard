@@ -8,7 +8,7 @@ let socket: Socket | null = null;
 export function connectSocket(): Socket {
   if (socket?.connected) return socket;
 
-  socket = io('http://localhost:5001', {
+socket = io(import.meta.env.VITE_BACKEND_URL || 'http://localhost:5001', {
     transports: ['websocket', 'polling'],
     reconnection: true,
     reconnectionAttempts: 5,

@@ -2,7 +2,7 @@
 
 A full-stack real-time collaborative whiteboard application where multiple users can draw, sketch, and brainstorm together — live, in the same room. Built with a clean dark UI inspired by Excalidraw and Figma, with a focus on smooth real-time collaboration.
 
-🔗 **Live Demo:** collabboard-omega.vercel.app
+🔗🔗 **Live Demo:** [collabboard-omega.vercel.app](https://collabboard-omega.vercel.app)
 
 ---
 
